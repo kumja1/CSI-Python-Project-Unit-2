@@ -14,7 +14,7 @@ story = {
     "main_story": [
         {
             "dialogue": "Cog is a young village boy who migrates to the west seeking a better life.",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "On his journey he encounters a pack of hyenas. What should he do?",
@@ -33,16 +33,16 @@ story = {
                         "is_less_than": "events#death",
                     },
                 },
-                "Give up": {"jump_forward_by": 0},
+                "Give up": {"jump_forward_by": -1},
             },
         },
         {
             "dialogue": "Cog was able to 'Run Away' from the hyenas",
-            "options": {"Next": {"jump_forward_by": 2}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 2}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "Cog was able to 'Fight' and escape the hyenas",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },  # I was thinking about making the dialogue dynamic like the death event, but that would lead to too much checking and ugly code
         {
             "dialogue": "As Cog continues his journey, he notices that his rations are running low.\nFortunately there is a berry bush up ahead, though it looks quite strange.\nWhat should he do?",
@@ -61,14 +61,14 @@ story = {
                         "is_less_than": "events#death",
                     },
                 },
-                "Give up": {"jump_forward_by": 0},
+                "Give up": {"jump_forward_by": -1},
             },
         },
         {
             "when": "poison",
             "dialogue": "Cog, as result of the posion, is sluggish and has a low chance of surviving should he continue. What should he do?",
             "options": {
-                "Return to village": {"jump_forward_by": 0},
+                "Return to village": {"jump_forward_by": -1},
                 "Continue": {"jump_forward_by": 1},
             },
         },
@@ -77,7 +77,7 @@ story = {
             "dialogue": "Cog perseveres despite the poison coursing through his body.",
             "options": {
                 "Next": {"jump_forward_by": 1},
-                "Quit": {"jump_forward_by": 0},
+                "Quit": {"jump_forward_by": -1},
             },
         },
         {
@@ -85,48 +85,48 @@ story = {
             "dialogue": "As he continues, Cog begins hallucinating. Suddenly he collapses as his world goes dark",
             "options": {
                 "Next": {"jump_forward_by": 1},
-                "Quit": {"jump_forward_by": 0},
+                "Quit": {"jump_forward_by": -1},
             },
         },
         {
             "when": "poison",
             "dialogue": "Cog wakes up in a stone house. Confused he looks around, and smiles when he see's the flag of the western empire",
             "options": {
-                "Quit": {"jump_forward_by": 0},
+                "Quit": {"jump_forward_by": -1},
             },
         },  # Sorry, I got a lazy here. So getting poisoned is the best way to win lol
         {
             "dialogue": "After sometime, Cog was able to find an apple tree",
-            "options": {"Next": {"jump_forward_by": 2}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 2}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "Cog survived eating the berries(though not without some significant bowel movement)",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "As Cog progresses further, he sees more a more signs of western civilization",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "A camp appers in the horizon, Cog goes in for a closer look.",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "As Cog draws closer, he begins to get worried as a foul odor permeates the air",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "Suddenly he jumps back with digust as he sees the camp littered with dead bodies.",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "They look as though they had been torn apart by some wild animal.",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "Cog, now scared, is wondering whether he should continue his journey.\n The animal that killed those people could still be out there.\n What should he do?",
             "options": {
-                "Return to the village": {"jump_forward_by": 0},
+                "Return to the village": {"jump_forward_by": -1},
                 "Find another route": {
                     "factor": 0.7,
                     "jump_forward_by": {
@@ -145,32 +145,32 @@ story = {
         },
         {
             "dialogue": "Cog decides to find another route. Though this path is longer, the thought of coming face to face with whatever killed those people, pushes such complaints aside.",
-            "options": {"Next": {"jump_forward_by": 4}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 4}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "Cog, against all common wisedom, continues on his path",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "As he continues, he hears fearsome sounds echoing throughout the forest",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "But somehow, Cog makes it through and continues on his way",  # Sorry Mr. Jernigan but I don't feel like adding a whole other branch with the animal encounter and I only have 1 day left to finish this
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "As Cog continues, he spots a city up ahead.",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "Cogs excitment begins to grow as he breaks into a sprint towards the city",
-            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": 0}},
+            "options": {"Next": {"jump_forward_by": 1}, "Quit": {"jump_forward_by": -1}},
         },
         {
             "dialogue": "As he reaches the city gates, Cog shouts in exubalation as he sees the symbol of the western empire",
             "options": {
-                "Quit": {"jump_forward_by": 0}
+                "Quit": {"jump_forward_by": -1}
             },  # I could make it longer but I only have one day left and I don't feel like it lol
         },
     ],
@@ -202,6 +202,11 @@ def run_event(eventObj, params):
 def run_chapter(storyObj):
     print(storyObj["dialogue"])
     selection = select(list(storyObj["options"].keys()), cursor_style="cyan")
+    if (selection == None):
+        return run_chapter(storyObj) -1
+
+        
+
     optionObj = storyObj["options"][selection]
 
     if is_dict(
@@ -264,7 +269,7 @@ def __run_story__():
             )
 
         next_index = run_chapter(chapter)
-        if next_index == 0:
+        if next_index == -1:
             ask_to_play_again()
 
         story_range.send(next_index)
