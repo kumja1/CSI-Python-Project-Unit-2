@@ -20,7 +20,7 @@ story = {
             "dialogue": "On his journey he encounters a pack of hyenas. What should he do?",
             "options": {
                 "Run Away": {
-                    "factor": "0.9",
+                    "factor": 0.9,
                     "jump_forward_by": {
                         "is_greater_than": 1,  # Index to jump to
                         "is_less_than": "events#death",
